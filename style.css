@@ -2,13 +2,17 @@
     margin: 0px;
     padding: 0px;
 }
-.square{
-    border:1px solid black;
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
-    margin: 5px;
-}
-.container{
+#container{
     display: flex;
+}
+.row{
+    flex: 1;
+}
+.col{
+    margin: 1px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.red-color{
+    background-color: red;
 }
