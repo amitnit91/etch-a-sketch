@@ -4,15 +4,28 @@
 }
 #container{
     display: flex;
+   
 }
 .row{
     flex: 1;
 }
 .col{
-    margin: 1px;
-    background-color: aqua;
-    border: 1px solid black;
+    background-color: white;
+    /* border: 1px solid black; */
+    
+    aspect-ratio: 1/1;
 }
 .red-color{
     background-color: red;
+}
+#btn{
+    padding: 20px 40px;
+    background-color: green;
+    color: white;
+    margin: 10px ;
+    font-weight: bold;
+    font-size: 18px;
+}
+#btn-container{
+    text-align: center;
 }
