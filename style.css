@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    background-color: rgb(240, 234, 234);
 }
 /* #container{
     display: flex;
@@ -81,6 +82,27 @@ h1{
 }
 .col{
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid gray;
     flex:1;
+}
+.btn{
+    padding: 20px 30px;
+    background-color: green;
+    color: white;
+    margin: 10px ;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10%;
+    display: block;    
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color:brown;
+    
+}
+#btn-container{
+    float: right;
+    margin-top: 40%;
+
 }

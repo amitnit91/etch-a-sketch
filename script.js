@@ -10,7 +10,6 @@ grid();
                 for(let j=1;j<=col;j++){
                     const box=document.createElement('div');
                     box.setAttribute('class','col');
-                    // box.textContent=j;
                     box.addEventListener('mouseenter',changeColor);
                     div.appendChild(box);
                     
@@ -25,21 +24,31 @@ grid();
             event.target.style.backgroundColor=randomColor;
         }
         
-        function input(){
+        function userInput(){
             let rowNo=prompt('enter grid row number');
-            rowNo=parseInt(rowNo);
-            if(rowNo>100){
+            if(parseInt(rowNo)>100){
                 alert('enter less than 100 number');
             }
-            else{
-
-                const container=document.querySelectorAll('.row');
-                for(i=0;i<container.length;i++){
-                    container[i].remove();
-                }
-                
-                grid(rowNo);
+            else if(rowNo==null){
+                alert("you canceled");
             }
+            else if(rowNo==""){
+                alert('you have not enterd anything');
+            }
+            else{              
+                removeGrid();                
+                grid(parseInt(rowNo));
+            }
+        }
+        function removeGrid(){
+            const container=document.querySelectorAll('.row');
+            for(i=0;i<container.length;i++){
+                container[i].remove();
+            }
+        }
+        function resetGrid(){
+            removeGrid();
+            grid();
         }
         
         
