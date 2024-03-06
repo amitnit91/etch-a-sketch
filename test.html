@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="btn-container">
-        <button onclick="input()" id="btn">Reset Grid</button>
+        <button onclick="userInput()" id="btn">Reset Grid</button>
     </div>
     <div id="container"></div>
     <script>
@@ -39,8 +39,8 @@
             event.target.style.backgroundColor=randomColor;
         }
         
-        function input(){
-            let rowNo=prompt('enter grid row number');
+        function userInput(){
+            let rowNo=prompt('enter grid row number-must be less than 100');
             rowNo=parseInt(rowNo);
             if(rowNo>100){
                 alert('enter less than 100 number');

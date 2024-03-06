@@ -2,8 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
-#container{
+/* #container{
     display: flex;
+    background-color: brown;
+    height: 500px;
+    width: 100%;
    
 }
 .row{
@@ -11,9 +14,9 @@
 }
 .col{
     background-color: white;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     
-    aspect-ratio: 1/1;
+      aspect-ratio: 1/1;
 }
 .red-color{
     background-color: red;
@@ -28,4 +31,56 @@
 }
 #btn-container{
     text-align: center;
+} */
+
+/* css for screen structure --diving the screen */
+
+
+#main-container{
+    
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+}
+#first{
+    flex: 25%;
+
+}
+#second{
+flex: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#third{
+    flex: 25%;
+}
+#grid-box{
+    height: 500px;
+    width: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+h1{
+    padding-bottom: 20px;
+}
+
+
+#container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+   
+}
+.row{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    background-color: white;
+    border: 1px solid black;
+    flex:1;
 }
