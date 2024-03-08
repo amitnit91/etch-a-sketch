@@ -1,5 +1,6 @@
-grid();
+        grid();
         
+        //function to create grid of given size
         function grid(gridSize=16){
             const container=document.querySelector('#container');
             let row=gridSize;
@@ -19,11 +20,14 @@ grid();
 
             }
         }
+
+        //function to change random color of square
         function changeColor(event){
             let randomColor='#'+Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,0).toUpperCase();
             event.target.style.backgroundColor=randomColor;
         }
         
+        //function to ask user input about grid size and create new grid
         function userInput(){
             let rowNo=prompt('enter grid row number');
             if(parseInt(rowNo)>100){
@@ -40,15 +44,25 @@ grid();
                 grid(parseInt(rowNo));
             }
         }
+
+        //function to remove the grid from container
         function removeGrid(){
             const container=document.querySelectorAll('.row');
             for(i=0;i<container.length;i++){
                 container[i].remove();
             }
         }
+
+        //function to reset the size of grid square
         function resetGrid(){
             removeGrid();
             grid();
         }
+
+        //function to create a darkish grid square
+        function darkGridSquare(){
+
+        }
+
         
         
