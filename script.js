@@ -23,8 +23,12 @@
 
         //function to change random color of square
         function changeColor(event){
+            let x;
             let randomColor='#'+Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,0).toUpperCase();
             event.target.style.backgroundColor=randomColor;
+            
+
+
         }
         
         //function to ask user input about grid size and create new grid
