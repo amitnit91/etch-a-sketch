@@ -21,12 +21,22 @@
             }
         }
 
-        //function to change random color of square
+        //function to change random color of square and darkneing of squares
         function changeColor(event){
-            let x;
             let randomColor='#'+Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,0).toUpperCase();
             event.target.style.backgroundColor=randomColor;
-            
+
+            //code for darking the grid square
+            let currentBrightness = parseFloat(event.target.style.filter.slice(11, -1));
+            if (isNaN(currentBrightness)) {
+                currentBrightness = 100;
+            }
+
+            if (currentBrightness > 0) {
+            event.target.style.filter = `brightness(${currentBrightness - 10}%)`;
+            } else {
+            currentBrightness = 0;
+            }
 
 
         }
@@ -61,11 +71,6 @@
         function resetGrid(){
             removeGrid();
             grid();
-        }
-
-        //function to create a darkish grid square
-        function darkGridSquare(){
-
         }
 
         
